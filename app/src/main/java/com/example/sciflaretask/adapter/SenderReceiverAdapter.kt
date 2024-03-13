@@ -19,7 +19,7 @@ class SenderReceiverAdapter(private val context: Context, var senderMsgList: Lis
     RecyclerView.Adapter<SenderReceiverAdapter.ViewHolder>() {
 
     val decoded: ByteArray = Base64.decode( SciFlareApplication.publicPrefs.secretKey, Base64.DEFAULT)
-    val secretKey: SecretKey = SecretKeySpec(decoded, 0, decoded.size, "AES")
+    val secretKey: SecretKey = SecretKeySpec(decoded, 0, decoded.size, "DES")
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

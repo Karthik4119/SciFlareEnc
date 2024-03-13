@@ -8,9 +8,9 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface MyApi {
-    @POST("SciMsg")
+    @POST("Task")
     suspend fun createMessage(@Body body: MessageReq): Response<MessageResp>
 
-    @GET("SciMsg")
+    @GET("Task")
     suspend fun readAllMessage(): Response<List<MessageResp>>
 }
